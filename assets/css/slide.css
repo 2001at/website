@@ -1,0 +1,38 @@
+.slider > li > img {
+    width:100%; /* 画像の幅を指定 */
+}
+
+.big > .container {
+    width: 100%; /* コンテナの幅を指定 */
+}
+
+.big{
+    padding-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* パソコン向けのスタイル */
+@media (min-width: 768px) {
+    .big{
+        padding-top: 0px;
+        /* align-items: initial; 
+        justify-content: initial; 
+        align-items: left; */
+        
+    }
+    /* .slider > li > img {
+        width:60vw;
+    }
+    
+    .big > .container {
+        width:60vw;
+    } */
+    
+    #left-all{
+        width: 70%;
+    }
+}
+

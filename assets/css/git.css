@@ -1,0 +1,22 @@
+.github-status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF
+}
+.status1,.status2{
+    width: 100%;
+}
+
+
+.github-status img {
+    width:100%; /* 高さを自動で調整（縦横の比率が違うので，どちらかしか合わせられない） */
+}
+
+/* パソコン向けのスタイル */
+/* @media (min-width: 768px) {
+    .github-status{
+        width: 60vw;
+    }
+} */
+

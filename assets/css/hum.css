@@ -1,0 +1,133 @@
+
+header{
+  position: absolute;
+  z-index: 999; /* ヘッダーを最前面に表示する */
+}
+
+.header1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* ヘッダーを画面の上部に固定 */
+    background-color: #333;
+  }
+  .logo1 {
+    font-weight: 700;
+    padding-left: 14px;
+    color: #fff;
+  }
+  .hamburger-menu {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    border: none;
+    background: transparent;
+    appearance: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  .hamburger-menu__bar {
+    display: inline-block;
+    width: 44%;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .5s;
+  }
+  .hamburger-menu__bar:first-child {
+    top: 16px;
+  }
+  .hamburger-menu__bar:nth-child(2) {
+    top: 24px;
+  }
+  .hamburger-menu__bar:last-child {
+    top: 32px;
+  }
+  .hamburger-menu--open .hamburger-menu__bar {
+    top: 50%;
+  }
+  .hamburger-menu--open .hamburger-menu__bar:first-child {
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  }
+  .hamburger-menu--open .hamburger-menu__bar:last-child {
+    transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+  }
+  .hamburger-menu--open .hamburger-menu__bar:nth-child(2) {
+    display: none;
+  }
+  .navigation1 {
+    display: none;
+    background: #333;
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    right: 0px;
+    z-index: 9999;
+  }
+  .navigation__list1 {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .navigation__list-item1 {
+    border-bottom: solid 1px #474747;
+  }
+  .navigation__list-item1:first-child {
+    border-top: solid 1px #474747;
+  }
+  .navigation__link1 {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    display: block;
+    padding: 24px 0;
+    transition: .5s;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .navigation__link1:hover {
+      background: #333;
+    }
+  }
+
+.wrapper {
+    display: none;
+}
+
+
+/* パソコン向けのスタイル */
+@media (min-width: 768px) {
+    .header1 {
+        display: none;
+    }
+
+    .wrapper{
+        position: fixed;
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        font-size: 23px;
+        height: 80px;
+        margin: 0 auto;
+        background-color: #333;
+        padding: 20px;
+    }
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .logo2 , .head2{
+        color: #fff;
+    }
+}
+
+/* main{
+  height: 1000px;
+} */
