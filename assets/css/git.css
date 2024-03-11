@@ -1,11 +1,18 @@
 .github-status {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #FFF
+
+    /* もし，2枚載せるならコメント外す */
+    /* background-color: #FFF; */
+
 }
 .status1,.status2{
     width: 100%;
+
+    /* もし，2枚載せるならコメントにする */
+    background-color: #FFF;
 }
 
 
@@ -14,9 +21,15 @@
 }
 
 /* パソコン向けのスタイル */
-/* @media (min-width: 768px) {
+@media (min-width: 768px) {
     .github-status{
-        width: 60vw;
+        flex-direction: row;
     }
-} */
+
+    
+    /* もし，2枚載せるならコメントにする*/
+    .status1,.status2{
+        width: 50%;
+    }
+}
 
